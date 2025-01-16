@@ -66,7 +66,7 @@ export default function Page() {
                       href={work.href}
                       badges={work.badges}
                       period={`${work.start} - ${work.end ?? "Present"}`}
-                      description={Array.isArray(work.description) ? work.description : [work.description]}
+                      description={Array.isArray(work.description) ? [...work.description] : [work.description as unknown as string]}
                   />
                 </BlurFade>
             ))}
