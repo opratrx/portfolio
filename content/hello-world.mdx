@@ -1,11 +1,325 @@
 ---
-title: "Hello World"
-publishedAt: "2024-06-18"
-summary: "My first post on my new blog."
+title: "C950 - Data Structures and Algorithms II"
+publishedAt: "2024-04-14"
+summary: "A detailed write-up on the implementation of the WGUPS Routing Program using a greedy algorithm."
 ---
 
-Hi there!
+### Hash Table
+```python
+class ChainingHashTable:
+    """
+    ,------------------------------------------------------------------------------------------------,
+    |                                HASH TABLE WITH CHAINS CLASS                                    |
+    |                                Time Complexity: O(1) - O(n)                                    |
+    '------------------------------------------------------------------------------------------------'
+
+    Description: This class represents a hash table with chaining implementation, allowing
+                 the storage of key-value pairs. In cases of hash collisions, the colliding
+                 items are stored in a linked list.
+    Methods:
+        1. __init__: Initializes the hash table with an initial capacity.
+        2. print_table: Prints the hash table.
+        3. insert: Inserts an item into the hash table.
+        4. search: Searches for an item based on the key.
+        5. remove: Removes an item from the hash table based on the key.
+
+    Time Complexity:
+        - __init__: O(n).
+        - print_table: O(n + m).
+        - insert: O(1) average and O(n) worst case.
+        - search: O(1) average and O(n) worst case.
+        - remove: O(1) average and O(n) worst case.
+
+    Attributes:
+    table : a list of lists that will be used to store the keys and values of the hash table
+
+    """
+
+    def __init__(self, init_capacity=40):
+        """
+        Constructs all the necessary attributes for the hash table object.
+        """
+        # Initialize an empty list to hold the hash table's buckets
+        self.table = []
+        # Create a number of empty buckets equal to the initial capacity
+        for i in range(init_capacity):
+            self.table.append([])
+
+    def print_table(self):
+        """
+        Prints the hash table.
+        """
+        # Print the header for the hash table
+        print(f"\n\n{Colors.BOLD}{Colors.ORANGE}Hash Table"
+              f"\n——————————————————————————————————————————————————————————————————————————————————————————————————————"
+              f"————————————————————————————————————————————————————————————————————————————————————————————————————————{Colors.END}")
+
+        # Iterate over each bucket in the hash table
+        for i in range(len(self.table)):
+            bucket = self.table[i]
+            if bucket:  # Only print the bucket if it's not empty
+                print(", ".join(str(key_value[1]) for key_value in bucket))
+
+    def insert(self, key, item):
+        """
+        Inserts a key-value pair into the hash table.
+        """
+        # Calculate the bucket index by hashing the key and taking the modulus of the hash table's length
+        bucket = hash(key) % len(self.table)
+        # Get the bucket list at the calculated index
+        bucket_list = self.table[bucket]
+        # Check if the key already exists in the bucket list
+        for key_value in bucket_list:
+            if key_value[0] == key:
+                # If the key exists, update its value and return True
+                key_value[1] = item
+                return True
+        # If the key does not exist, append a new key-value pair to the bucket list and return True
+        key_value = [key, item]
+        bucket_list.append(key_value)
+        return True
+
+    def search(self, key):
+        """
+        Searches for a key in the hash table and returns its corresponding value.
+        """
+        # Calculate the bucket index by hashing the key and taking the modulus of the hash table's length
+        bucket = hash(key) % len(self.table)
+        # Get the bucket list at the calculated index
+        bucket_list = self.table[bucket]
+        # Check if the key exists in the bucket list
+        for key_value in bucket_list:
+            if key_value[0] == key:
+                # If the key exists, return its value
+                return key_value[1]
+        # If the key does not exist, return None
+        return None
+
+    def remove(self, key):
+        """
+        Removes a key and its corresponding value from the hash table.
+        """
+        # Calculate the bucket index by hashing the key and taking the modulus of the hash table's length
+        bucket = hash(key) % len(self.table)
+        # Get the bucket list at the calculated index
+        bucket_list = self.table[bucket]
+        # Check if the key exists in the bucket list
+        for key_value in bucket_list:
+            if key_value[0] == key:
+                # If the key exists, remove the key-value pair from the bucket list and return True
+                bucket_list.remove(key_value)
+                return True
+        # If the key does not exist, return False
+        return False
+
+```
+
+### Look-Up Functions
+
+```python
+def lookup_package_status():
+    """
+    This function allows the user to look up the status of packages at a specific time.
+    The user can choose to view the status of a specific package or all packages.
+    The user can also choose to view a specific detail of the package(s) or all details.
+    The details include the package's address, city, zip code, state, deadline, weight,
+    status, departure time, delivery time, and truck ID.
+
+    Time Complexity: O(n)
+
+    Returns:
+    None
+    """
+
+    # Ask the user to input the time in 24-hour format to view the package statuses for.
+    # The input is validated using a regular expression to ensure it matches the HH:MM format.
+    user_time_str = get_user_input(
+        f"\n{Colors.BOLD}{Colors.ORANGE}Please input the time in 24-hour [HH:MM] format you wish to "
+        f"view the package statuses for, e.g., enter 14:30 for 2:30 PM:{Colors.END} \n> ",
+        lambda x: re.match(r'^([01]\d|2[0-3]):([0-5]\d)$', x),
+        f"{Colors.BOLD}{Colors.LIGHT_RED}Invalid time format. Please try again.{Colors.END}"
+    )
+    # Convert the user input time to a datetime.timedelta object
+    (h, m) = map(int, user_time_str.split(":"))
+    time_change = datetime.timedelta(hours=h, minutes=m)
+
+    # Ask the user to enter the package ID they wish to view, or press Enter to view all packages.
+    # The input is validated to ensure it is either empty or a valid package ID (1-40).
+    package_id_input = get_user_input(
+        f"\n\n{Colors.BOLD}{Colors.ORANGE}Please enter the package ID you wish to view, "
+        f"or press Enter to view all packages: {Colors.END}\n> ",
+        lambda x: x == '' or (x.isdigit() and 1 <= int(x) <= 40),
+        f"{Colors.BOLD}{Colors.LIGHT_RED}Invalid package ID. Please try again.{Colors.END}"
+    )
+    # Convert the user input package ID to an integer, or get a list of all 40 package IDs if the user input is empty
+    package_ids = [int(package_id_input)] if package_id_input else range(1, 41)
+
+    # Ask the user to select the parameter they want to view.
+    # The input is validated to ensure it is a valid option (a-j or k for all).
+    detail_input = get_user_input(
+        f"\n\n{Colors.BOLD}{Colors.ORANGE}Select the parameter you want to view:{Colors.END}\n"
+        f"{Colors.BOLD}{Colors.BRIGHT_WHITE}a{Colors.END} - Address\n"
+        f"{Colors.BOLD}{Colors.BRIGHT_WHITE}b{Colors.END} - City\n"
+        f"{Colors.BOLD}{Colors.BRIGHT_WHITE}c{Colors.END} - Zip Code\n"
+        f"{Colors.BOLD}{Colors.BRIGHT_WHITE}d{Colors.END} - State\n"
+        f"{Colors.BOLD}{Colors.BRIGHT_WHITE}e{Colors.END} - Deadline\n"
+        f"{Colors.BOLD}{Colors.BRIGHT_WHITE}f{Colors.END} - Weight\n"
+        f"{Colors.BOLD}{Colors.BRIGHT_WHITE}g{Colors.END} - Status\n"
+        f"{Colors.BOLD}{Colors.BRIGHT_WHITE}h{Colors.END} - Departure Time\n"
+        f"{Colors.BOLD}{Colors.BRIGHT_WHITE}i{Colors.END} - Delivery Time\n"
+        f"{Colors.BOLD}{Colors.BRIGHT_WHITE}j{Colors.END} - Truck ID\n"
+        f"{Colors.BOLD}{Colors.BRIGHT_WHITE}k{Colors.END} - All\n> ",
+        lambda x: x in ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k'],
+        f"{Colors.BOLD}{Colors.LIGHT_RED}Invalid option. Please try again.{Colors.END}"
+    )
+
+    # Initialize an empty list to track if headers have been printed
+    printed_headers = []
+
+    # For each package ID, get the package from the hash table, update its status, and print its details
+    for package_id in package_ids:
+        package = packageHash.search(package_id)
+        if package:
+            package.status_update(time_change)
+            print_package_details(package, detail=detail_input, printed_headers=printed_headers)
+```
+
+### Original Code
+
+#### Package Class - Implementation
+```python
+class Packages:
+    """
+    A class used to represent a Package.
+
+    Time Complexity: O(n) - O(1)
+    Constructor and Basic Operations: O(1)
+    Batch Operations: O(n)
+
+    Methods:
+    - __init__(): Constructs all the necessary attributes for the package object.
+    - __str__(): Returns a string representation of the package.
+    - Status_update(time_change): Updates the status of the package based on the current time.
+    """
+
+    def __init__(self, ID, street, city, state, zip, deadline, weight, notes, status='At Hub', departureTime=None,
+                 deliveryTime=None, truckID=None):
+        """
+        Constructs all the necessary attributes for the package object.
+        """
+        self.deliveryTime = deliveryTime
+        self.departureTime = departureTime
+        self.ID = ID
+        self.street = street
+        self.city = city
+        self.state = state
+        self.zip = zip
+        self.deadline = deadline
+        self.weight = weight
+        self.notes = notes
+        self.status = status
+        self.truckID = truckID
+
+    def __str__(self):
+        """
+        Returns a string representation of the package.
+
+        Returns:
+        str : a string representation of the package
+        """
+        return (
+                f"{Colors.BOLD_ORANGE}ID:{Colors.END} %s \t "
+                f"{Colors.BOLD_ORANGE}Address:{Colors.END} %-20s \t "
+                f"{Colors.BOLD_ORANGE}City:{Colors.END} %s \t "
+                f"{Colors.BOLD_ORANGE}State:{Colors.END} %s \t "
+                f"{Colors.BOLD_ORANGE}Zip:{Colors.END} %s \t "
+                f"{Colors.BOLD_ORANGE}Deadline:{Colors.END} %s \t "
+                f"{Colors.BOLD_ORANGE}Weight:{Colors.END} %s \t "
+                f"{Colors.BOLD_ORANGE}Status:{Colors.END} %s \t "
+                f"{Colors.BOLD_ORANGE}Departure Time:{Colors.END} %s \t "
+                f"{Colors.BOLD_ORANGE}Delivery Time:{Colors.END} %s" %
+                (self.ID, self.street, self.city, self.state, self.zip, self.deadline, self.weight, self.status,
+                 self.departureTime, self.deliveryTime))
+```
+
+#### Truck Class - Implementation
+
+*Code and explanation of the Truck Class implementation.*
+
+#### Address Finding Function
+
+*Details about the Address Finding Function.*
+
+#### Distance Calculation Function
+
+*Details about the Distance Calculation Function.*
+
+### Greedy Algorithm - Implementation
+
+*Code and explanation of the Greedy Algorithm implementation.*
 
 ```jsx
-console.log("Hello World");
+// Example of a Greedy Algorithm
+function greedyAlgorithm() {
+  console.log("Implementing Greedy Algorithm");
+}
 ```
+
+### Interface
+
+#### User Interface
+
+*Description of the User Interface.*
+
+#### Status Checks
+
+1. **First Status Check (9:00 AM)**
+   ![Status Check 9:00 AM](path-to-image)
+
+2. **Second Status Check (10:15 AM)**
+   ![Status Check 10:15 AM](path-to-image)
+
+3. **Third Status Check (12:30 PM)**
+   ![Status Check 12:30 PM](path-to-image)
+
+### Strengths of the Chosen Algorithm
+
+The greedy algorithm is both simple and efficient, making it suitable for real-time truck routing and scheduling. For example:
+
+> "Greedy algorithms are often faster than other optimization algorithms, such as dynamic programming or branch and bound, because they require less computation and memory." *(GeeksforGeeks, n.d.)*
+
+### Verification of Algorithm
+
+The algorithm adheres to specified conditions, ensuring efficient delivery under real-time constraints.
+
+### Alternative Algorithms
+
+#### Dijkstra's Algorithm
+
+- Finds the shortest path in a weighted graph.
+- Optimizes route by distance and time.
+
+#### Kruskal's Algorithm
+
+- Constructs a minimum spanning tree.
+- Optimizes network by reducing total travel distance.
+
+### Different Approach
+
+If redoing the project, a modular structure and advanced routing algorithms like Dijkstra's would improve maintainability and effectiveness.
+
+### Verification of Data Structure
+
+The Hash Table effectively updates package data in real-time, meeting delivery requirements.
+
+#### Other Data Structures
+
+- **Binary Search Trees (BST):** Maintains ordered data for sorted delivery reports.
+- **Graphs:** Models relationships and distances for routing.
+
+---
+
+### References
+
+- Nagaraj. (2023, February 20). *Dijkstra's algorithm: An overview 2023.* Medium. Retrieved April 14, 2024.
+- GeeksforGeeks. (n.d.). *Greedy algorithms: General structure and applications.*

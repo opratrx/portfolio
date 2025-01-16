@@ -75,7 +75,7 @@ export const DATA = {
   work: [
     {
       company: "CompSciLib",
-      href: "https://www.compscilib.com",
+      href: "#",
       badges: [],
       location: "Remote",
       title: "Quality Assurance Tester",
@@ -93,7 +93,6 @@ export const DATA = {
     {
       company: "California Department of Food and Agriculture",
       badges: [],
-      href: "https://www.cdfa.ca.gov/",
       location: "Sacramento, CA",
       title: "Agricultural Technician II",
       logoUrl: "/cali.webp",
@@ -110,7 +109,6 @@ export const DATA = {
     {
       company: "California Department of Food and Agriculture ",
       badges: [],
-      href: "https://www.cdfa.ca.gov/",
       location: "Sacramento, CA",
       title: "Agricultural Technician I",
       logoUrl: "/cali.webp",

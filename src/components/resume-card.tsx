@@ -34,9 +34,9 @@ export const ResumeCard = ({
                                awardDesc,
                            }: ResumeCardProps) => {
     return (
-        <Link href={href || "#"} className="block cursor-pointer">
+        // <Link href={href || "#"} className="block cursor-pointer">
             <Card className="flex group">
-                <div className="flex-none">
+                <div className="flex-none block cursor-pointer">
                     <Avatar className="border size-12 m-auto bg-muted-background dark:bg-foreground">
                         <AvatarImage src={logoUrl} alt={altText} className="object-contain" />
                         <AvatarFallback>{altText[0]}</AvatarFallback>
@@ -44,7 +44,7 @@ export const ResumeCard = ({
                 </div>
                 <div className="flex-grow ml-4 items-center flex-col">
                     <CardHeader>
-                        <div className="flex items-center justify-between gap-x-2 text-base">
+                        <div className="flex items-center justify-between gap-x-2 text-base block cursor-pointer">
                             <h3 className="inline-flex items-center justify-center font-semibold leading-none text-xs sm:text-sm">
                                 {title}
                                 {badges && (
@@ -66,7 +66,7 @@ export const ResumeCard = ({
                                 {period}
                             </div>
                         </div>
-                        {subtitle && <div className="font-sans text-xs">{subtitle}</div>}
+                        {subtitle && <div className="font-sans text-xs block cursor-pointer">{subtitle}</div>}
                         {awardDesc && <div className="font-sans text-xs italic">{awardDesc}</div>}
                     </CardHeader>
                     {description && (
@@ -84,6 +84,6 @@ export const ResumeCard = ({
                     )}
                 </div>
             </Card>
-        </Link>
+        // </Link>
     );
 };
