@@ -8,18 +8,20 @@ import { motion } from "framer-motion";
 import { ChevronRightIcon } from "lucide-react";
 import Link from "next/link";
 import React from "react";
+import { TextAnimate } from "@/components/ui/text-animate";
 
 interface ResumeCardProps {
-  logoUrl: string;
-  altText: string;
-  title: string;
-  subtitle?: string;
-  href?: string;
-  badges?: readonly string[];
-  period: string;
-  description?: string[]; // Changed to array
-  awardDesc?: string;
+    logoUrl: string;
+    altText: string;
+    title: string;
+    subtitle?: string;
+    href?: string;
+    badges?: readonly string[];
+    period: string;
+    description?: string[]; // Array of strings for line-by-line animation
+    awardDesc?: string;
 }
+
 export const ResumeCard = ({
                                logoUrl,
                                altText,
@@ -69,15 +71,15 @@ export const ResumeCard = ({
                     </CardHeader>
                     {description && (
                         <motion.div className="collapse-description mt-2 text-xs sm:text-sm">
-                            {Array.isArray(description) ? (
-                                <ul className="list-disc pl-5">
-                                    {description.map((item, idx) => (
-                                        <li key={idx}>{item}</li>
-                                    ))}
-                                </ul>
-                            ) : (
-                                <p>{description}</p>
-                            )}
+                            <ul className="list-disc pl-5">
+                                {description.map((line, idx) => (
+                                    <li key={idx}>
+                                        <TextAnimate animation="slideLeft" by="line" as="span">
+                                            {line}
+                                        </TextAnimate>
+                                    </li>
+                                ))}
+                            </ul>
                         </motion.div>
                     )}
                 </div>

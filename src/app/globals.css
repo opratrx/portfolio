@@ -147,6 +147,7 @@
   max-height: 1000px; /* Adjust as needed */
   opacity: 1;
 }
+
  
 code[data-line-numbers-max-digits="2"] > [data-line]::before {
   width: 2rem;
