@@ -318,7 +318,8 @@ export default function Page() {
                     I like building things
                   </h2>
                   <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                    Every skill I’ve picked up has been a step toward becoming the best version of myself. This timeline showcases how I’ve explored, experimented, and grown through my passion for learning.
+                    Every skill I’ve picked up has been a step toward becoming the best version of myself. This timeline
+                    showcases how I’ve explored, experimented, and grown through my passion for learning.
                   </p>
                 </div>
               </div>
@@ -333,8 +334,9 @@ export default function Page() {
                       <HackathonCard
                           title={project.title}
                           description={project.description}
-                          location={project.location}
+                          tags={project.tags}
                           dates={project.dates}
+                          image={project.image}
                           links={project.links}
                       />
                     </BlurFade>

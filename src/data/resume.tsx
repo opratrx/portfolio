@@ -209,7 +209,7 @@ on the first attempt. The student had an intuitive simulation for the interface 
     },
     {
       title: "Package Delivery System",
-      href: "https://magicui.design",
+      href: "https://github.com/opratrx/c950-data-structures-algorithms-ii",
       dates: "June 2023 - Present",
       active: true,
       description:
@@ -220,211 +220,200 @@ on the first attempt. The student had an intuitive simulation for the interface 
       links: [
         {
           type: "Source",
-          href: "https://github.com/magicuidesign/magicui",
+          href: "https://github.com/opratrx/c950-data-structures-algorithms-ii",
           icon: <Icons.github className="size-3" />,
         },
       ],
       image: "",
       video: "./c950.mp4",
     },
-    {
-      title: "llm.report",
-      href: "https://llm.report",
-      dates: "April 2023 - September 2023",
-      active: true,
-      description:
-        "Developed an open-source logging and analytics platform for OpenAI: Log your ChatGPT API requests, analyze costs, and improve your prompts.",
-      technologies: [
-        "Next.js",
-        "Typescript",
-        "PostgreSQL",
-        "Prisma",
-        "TailwindCSS",
-        "Shadcn UI",
-        "Magic UI",
-        "Stripe",
-        "Cloudflare Workers",
-      ],
-      links: [
-        {
-          type: "Website",
-          href: "https://llm.report",
-          icon: <Icons.globe className="size-3" />,
-        },
-        {
-          type: "Source",
-          href: "https://github.com/dillionverma/llm.report",
-          icon: <Icons.github className="size-3" />,
-        },
-      ],
-      image: "",
-      video: "https://cdn.llm.report/openai-demo.mp4",
-    },
-    {
-      title: "Automatic Chat",
-      href: "https://automatic.chat",
-      dates: "April 2023 - March 2024",
-      active: true,
-      description:
-        "Developed an AI Customer Support Chatbot which automatically responds to customer support tickets using the latest GPT models.",
-      technologies: [
-        "Next.js",
-        "Typescript",
-        "PostgreSQL",
-        "Prisma",
-        "TailwindCSS",
-        "Shadcn UI",
-        "Magic UI",
-        "Stripe",
-        "Cloudflare Workers",
-      ],
-      links: [
-        {
-          type: "Website",
-          href: "https://automatic.chat",
-          icon: <Icons.globe className="size-3" />,
-        },
-      ],
-      image: "",
-      video:
-        "https://pub-83c5db439b40468498f97946200806f7.r2.dev/automatic-chat.mp4",
-    },
+    // {
+    //   title: "llm.report",
+    //   href: "https://llm.report",
+    //   dates: "April 2023 - September 2023",
+    //   active: true,
+    //   description:
+    //     "Developed an open-source logging and analytics platform for OpenAI: Log your ChatGPT API requests, analyze costs, and improve your prompts.",
+    //   technologies: [
+    //     "Next.js",
+    //     "Typescript",
+    //     "PostgreSQL",
+    //     "Prisma",
+    //     "TailwindCSS",
+    //     "Shadcn UI",
+    //     "Magic UI",
+    //     "Stripe",
+    //     "Cloudflare Workers",
+    //   ],
+    //   links: [
+    //     {
+    //       type: "Website",
+    //       href: "https://llm.report",
+    //       icon: <Icons.globe className="size-3" />,
+    //     },
+    //     {
+    //       type: "Source",
+    //       href: "https://github.com/dillionverma/llm.report",
+    //       icon: <Icons.github className="size-3" />,
+    //     },
+    //   ],
+    //   image: "",
+    //   video: "https://cdn.llm.report/openai-demo.mp4",
+    // },
+    // {
+    //   title: "Automatic Chat",
+    //   href: "https://automatic.chat",
+    //   dates: "April 2023 - March 2024",
+    //   active: true,
+    //   description:
+    //     "Developed an AI Customer Support Chatbot which automatically responds to customer support tickets using the latest GPT models.",
+    //   technologies: [
+    //     "Next.js",
+    //     "Typescript",
+    //     "PostgreSQL",
+    //     "Prisma",
+    //     "TailwindCSS",
+    //     "Shadcn UI",
+    //     "Magic UI",
+    //     "Stripe",
+    //     "Cloudflare Workers",
+    //   ],
+    //   links: [
+    //     {
+    //       type: "Website",
+    //       href: "https://automatic.chat",
+    //       icon: <Icons.globe className="size-3" />,
+    //     },
+    //   ],
+    //   image: "",
+    //   video:
+    //     "https://pub-83c5db439b40468498f97946200806f7.r2.dev/automatic-chat.mp4",
+    // },
   ],
   hackathons: [
     {
       title: "Senior Project - Capstone",
-      dates: "November 23rd - 25th, 2018",
-      location: "London, Ontario",
+      dates: "Western Governors University - C964",
+      tags: [
+        "Python",
+        "Flask",
+        "SQLAlchemy",
+        "Scikit-learn",
+        "NumPy",
+        "Matplotlib",
+        "Semantic UI",
+        "JavaScript",
+        "HTML/CSS",
+      ],
       description:
-        "Developed a mobile application which delivered bedtime stories to children using augmented reality.",
+        "The Computer Science Capstone course allows the student to demonstrate their application of the academic and\n" +
+          "professional abilities developed during the BSCS program. The capstone challenges students to integrate skills and\n" +
+          "knowledge from all program domains into one project.",
 
       links: [
         {
-          title: "Github",
-          icon: <Icons.github className="h-4 w-4" />,
-          href: "https://github.com/cryptotrends/cryptotrends",
+          title: "Website",
+          icon: <Icons.globe className="h-4 w-4" />,
+          href: "https://swiftmd.0n.engineer/",
         },
       ],
     },
     {
       title: "Data Structures & Algorithms II",
-      dates: "September 14th - 16th, 2018",
-      location: "Waterloo, Ontario",
+      dates: "Western Governors University - C950",
+      tags: ["Python"],
       description:
-        "Developed a mobile application which delivers university campus wide events in real time to all students.",
+        "Data Structures and Algorithms II explores the analysis and implementation of high-performance data structures and supporting algorithms, including graphs, hashing, self-adjusting data structures, set representations, and dynamic programming. The course also introduces students to NP-complete problems. The course discusses how to use Python techniques to implement software solutions for problems of memory management and data compression. This course has two prerequisites: Data Structures and Algorithms I and Discrete Math II.",
       links: [
         {
           title: "Github",
           icon: <Icons.github className="h-4 w-4" />,
-          href: "https://github.com/cryptotrends/cryptotrends",
+          href: "https://github.com/opratrx/c950-data-structures-algorithms-ii/",
         },
       ],
     },
     {
       title: "Advanced Java",
-      dates: "March 23rd - 24th, 2018",
-      location: "San Francisco, California",
+      dates: "Western Governors University - D387",
+      tags: [
+          "Java",
+          "Maven",
+          "Spring Boot",
+          "Angular",
+          "Docker",
+          "SQL",
+          "AWS",
+      ],
       description:
-        "Developed a mobile application which communcicates a victims medical data from inside an ambulance to doctors at hospital.",
+        "Advanced Java refines object-oriented programming expertise and skills. You will implement multithreaded, object-oriented code with the features of Java necessary to develop software that meets business requirements. Additionally, you will determine how to deploy software applications using cloud services. This course requires intermediate expertise in object-oriented programming and the Java language.",
       icon: "public",
       links: [
         {
           title: "Github",
           icon: <Icons.github className="h-4 w-4" />,
-          href: "https://github.com/cryptotrends/cryptotrends",
+          href: "https://github.com/opratrx/d387-advanced-java",
         },
       ],
     },
     {
       title: "Back-End Programming",
-      dates: "February 3rd - 4th, 2018",
-      location: "San Francisco, California",
+      dates: "Western Governors University - D288",
+      tags: [
+          "Java",
+          "Maven",
+          "Spring Boot",
+          "Angular",
+          "SQL",
+          "Lombok",
+      ],
       description:
-        "Developed a web application which aggregates social media data regarding cryptocurrencies and predicts future prices.",
+        "Back-End Programming introduces students to creating back-end components of a web application with the support of framework packages. This course also teaches students how to implement database functionality in a web application and how to create web services. This course requires intermediate expertise in object-oriented programming and the Java language.",
       links: [
         {
           title: "Github",
           icon: <Icons.github className="h-4 w-4" />,
-          href: "https://github.com/cryptotrends/cryptotrends",
+          image: "https://kagi.com/proxy/i?c=lWla4SiEvVNmj85b_dW2HcBDkb-62vZXR0vAz8RZagoDUxPesKfOlDMd49nFCewhhn0rxbEkwn-2wtYtHSE8-UW-hRXUpYeG50dRQH08vmIH3BHDIp37cLe56DZNACJ77cvgKyXxcB1pJ9g5AzBsxgDNzHIYprcyeL3Gffhl7EA%3D",
+          mlh: "https://s3.amazonaws.com/logged-assets/trust-badge/2017/white.svg",
+          href: "https://github.com/opratrx/d288-back-end",
         },
       ],
     },
     {
       title: "Java Frameworks",
-      dates: "January 20th - 21st, 2018",
-      location: "Davis, California",
+      dates: "Western Governors University - D287",
+      tags: [
+          "Java",
+          "Maven",
+          "Spring Boot",
+          "Thymeleaf",
+          "SQL",
+          "Bootstrap",
+      ],
       description:
-        "Developed a mobile application which allocates a daily carbon emission allowance to users to move towards a sustainable environment.",
-      win: "Best Data Hack",
+        "Java Frameworks builds object-oriented programming expertise and introduces powerful new tools for Java application development. Students will execute exception handling, Java frameworks, and other object-oriented principles and constructs to develop a complete application including a user interface. This course requires foundational knowledge of object-oriented programming and the Java language.",
       mlh: "https://s3.amazonaws.com/logged-assets/trust-badge/2018/white.svg",
       links: [
         {
           title: "GitHub",
           icon: <Icons.github className="h-4 w-4" />,
-          href: "https://github.com/Wallet6/my6footprint-machine-learning",
+          href: "https://github.com/opratrx/d287-java-frameworks",
         },
       ],
     },
-    // {
-    //   title: "ETH Waterloo",
-    //   dates: "October 13th - 15th, 2017",
-    //   location: "Waterloo, Ontario",
-    //   description:
-    //     "Developed a blockchain application for doctors and pharmacists to perform trustless transactions and prevent overdosage in patients.",
-    //   image:
-    //     "https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/eth-waterloo.png",
-    //   links: [
-    //     {
-    //       title: "Organization",
-    //       icon: <Icons.github className="h-4 w-4" />,
-    //       href: "https://github.com/ethdocnet",
-    //     },
-    //   ],
-    // },
-    // {
-    //   title: "Hack The North",
-    //   dates: "September 15th - 17th, 2017",
-    //   location: "Waterloo, Ontario",
-    //   description:
-    //     "Developed a virtual reality application allowing users to see themselves in third person.",
-    //   image:
-    //     "https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/hack-the-north.png",
-    //   mlh: "https://s3.amazonaws.com/logged-assets/trust-badge/2017/white.svg",
-    //   links: [
-    //     {
-    //       title: "Streamer Source",
-    //       icon: <Icons.github className="h-4 w-4" />,
-    //       href: "https://github.com/justinmichaud/htn2017",
-    //     },
-    //     {
-    //       title: "Client Source",
-    //       icon: <Icons.github className="h-4 w-4" />,
-    //       href: "https://github.com/dillionverma/RTSPClient",
-    //     },
-    //   ],
-    // },
-    // {
-    //   title: "Hack The 6ix",
-    //   dates: "August 26th - 27th, 2017",
-    //   location: "Toronto, Ontario",
-    //   description:
-    //     "Developed an open platform for people shipping items to same place to combine shipping costs and save money.",
-    //   image:
-    //     "https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/hack-the-6ix.jpg",
-    //   mlh: "https://s3.amazonaws.com/logged-assets/trust-badge/2017/white.svg",
-    //   links: [
-    //     {
-    //       title: "Source",
-    //       icon: <Icons.github className="h-4 w-4" />,
-    //       href: "https://github.com/ShareShip/ShareShip",
-    //     },
-    //     {
-    //       title: "Site",
-    //       icon: <Icons.globe className="h-4 w-4" />,
-    //       href: "https://share-ship.herokuapp.com/",
-    //     },
-    //   ],
-    // },
+    {
+      title: "Genetic Algorithm Robots",
+      dates: "Folsom Lake College - CISP 400",
+      tags: ["C++"],
+      description:
+        "This project is a C++ implementation of an experiment first initiated at Harvard University in 1968. The primary objective is to study the effects of evolution on a population of robots using a genetic algorithm. Robots are designed to navigate a grid in search of batteries, which they use as an energy source. As they move and make decisions, they consume energy, and their survival depends on efficient decision-making.",
+      links: [
+        {
+          title: "Source",
+          icon: <Icons.github className="h-4 w-4" />,
+          href: "https://github.com/opratrx/flc_geneticalgo",
+        },
+      ],
+    },
     // {
     //   title: "Stupid Hack Toronto",
     //   dates: "July 23rd, 2017",
