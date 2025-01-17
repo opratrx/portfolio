@@ -292,46 +292,12 @@ on the first attempt. The student had an intuitive simulation for the interface 
   ],
   hackathons: [
     {
-      title: "Hack Western 5",
+      title: "Senior Project - Capstone",
       dates: "November 23rd - 25th, 2018",
       location: "London, Ontario",
       description:
         "Developed a mobile application which delivered bedtime stories to children using augmented reality.",
-      image:
-        "https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/hack-western.png",
-      mlh: "https://s3.amazonaws.com/logged-assets/trust-badge/2019/mlh-trust-badge-2019-white.svg",
-      links: [],
-    },
-    {
-      title: "Hack The North",
-      dates: "September 14th - 16th, 2018",
-      location: "Waterloo, Ontario",
-      description:
-        "Developed a mobile application which delivers university campus wide events in real time to all students.",
-      image:
-        "https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/hack-the-north.png",
-      mlh: "https://s3.amazonaws.com/logged-assets/trust-badge/2019/mlh-trust-badge-2019-white.svg",
-      links: [],
-    },
-    {
-      title: "FirstNet Public Safety Hackathon",
-      dates: "March 23rd - 24th, 2018",
-      location: "San Francisco, California",
-      description:
-        "Developed a mobile application which communcicates a victims medical data from inside an ambulance to doctors at hospital.",
-      icon: "public",
-      image:
-        "https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/firstnet.png",
-      links: [],
-    },
-    {
-      title: "DeveloperWeek Hackathon",
-      dates: "February 3rd - 4th, 2018",
-      location: "San Francisco, California",
-      description:
-        "Developed a web application which aggregates social media data regarding cryptocurrencies and predicts future prices.",
-      image:
-        "https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/developer-week.jpg",
+
       links: [
         {
           title: "Github",
@@ -340,39 +306,65 @@ on the first attempt. The student had an intuitive simulation for the interface 
         },
       ],
     },
-    // {
-    //   title: "HackDavis",
-    //   dates: "January 20th - 21st, 2018",
-    //   location: "Davis, California",
-    //   description:
-    //     "Developed a mobile application which allocates a daily carbon emission allowance to users to move towards a sustainable environment.",
-    //   image:
-    //     "https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/hack-davis.png",
-    //   win: "Best Data Hack",
-    //   mlh: "https://s3.amazonaws.com/logged-assets/trust-badge/2018/white.svg",
-    //   links: [
-    //     {
-    //       title: "Devpost",
-    //       icon: <Icons.globe className="h-4 w-4" />,
-    //       href: "https://devpost.com/software/my6footprint",
-    //     },
-    //     {
-    //       title: "ML",
-    //       icon: <Icons.github className="h-4 w-4" />,
-    //       href: "https://github.com/Wallet6/my6footprint-machine-learning",
-    //     },
-    //     {
-    //       title: "iOS",
-    //       icon: <Icons.github className="h-4 w-4" />,
-    //       href: "https://github.com/Wallet6/CarbonWallet",
-    //     },
-    //     {
-    //       title: "Server",
-    //       icon: <Icons.github className="h-4 w-4" />,
-    //       href: "https://github.com/Wallet6/wallet6-server",
-    //     },
-    //   ],
-    // },
+    {
+      title: "Data Structures & Algorithms II",
+      dates: "September 14th - 16th, 2018",
+      location: "Waterloo, Ontario",
+      description:
+        "Developed a mobile application which delivers university campus wide events in real time to all students.",
+      links: [
+        {
+          title: "Github",
+          icon: <Icons.github className="h-4 w-4" />,
+          href: "https://github.com/cryptotrends/cryptotrends",
+        },
+      ],
+    },
+    {
+      title: "Advanced Java",
+      dates: "March 23rd - 24th, 2018",
+      location: "San Francisco, California",
+      description:
+        "Developed a mobile application which communcicates a victims medical data from inside an ambulance to doctors at hospital.",
+      icon: "public",
+      links: [
+        {
+          title: "Github",
+          icon: <Icons.github className="h-4 w-4" />,
+          href: "https://github.com/cryptotrends/cryptotrends",
+        },
+      ],
+    },
+    {
+      title: "Back-End Programming",
+      dates: "February 3rd - 4th, 2018",
+      location: "San Francisco, California",
+      description:
+        "Developed a web application which aggregates social media data regarding cryptocurrencies and predicts future prices.",
+      links: [
+        {
+          title: "Github",
+          icon: <Icons.github className="h-4 w-4" />,
+          href: "https://github.com/cryptotrends/cryptotrends",
+        },
+      ],
+    },
+    {
+      title: "Java Frameworks",
+      dates: "January 20th - 21st, 2018",
+      location: "Davis, California",
+      description:
+        "Developed a mobile application which allocates a daily carbon emission allowance to users to move towards a sustainable environment.",
+      win: "Best Data Hack",
+      mlh: "https://s3.amazonaws.com/logged-assets/trust-badge/2018/white.svg",
+      links: [
+        {
+          title: "GitHub",
+          icon: <Icons.github className="h-4 w-4" />,
+          href: "https://github.com/Wallet6/my6footprint-machine-learning",
+        },
+      ],
+    },
     // {
     //   title: "ETH Waterloo",
     //   dates: "October 13th - 15th, 2017",
