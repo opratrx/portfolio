@@ -317,6 +317,7 @@ on the first attempt. The student had an intuitive simulation for the interface 
           href: "https://swiftmd.0n.engineer/",
         },
       ],
+      image: "", // Add the image property here
     },
     {
       title: "Data Structures & Algorithms II",
@@ -331,6 +332,7 @@ on the first attempt. The student had an intuitive simulation for the interface 
           href: "https://github.com/opratrx/c950-data-structures-algorithms-ii/",
         },
       ],
+      image: "", // Add the image property here
     },
     {
       title: "Advanced Java",
@@ -354,6 +356,7 @@ on the first attempt. The student had an intuitive simulation for the interface 
           href: "https://github.com/opratrx/d387-advanced-java",
         },
       ],
+      image: "", // Add the image property here
     },
     {
       title: "Back-End Programming",
@@ -377,6 +380,7 @@ on the first attempt. The student had an intuitive simulation for the interface 
           href: "https://github.com/opratrx/d288-back-end",
         },
       ],
+      image: "", // Add the image property here
     },
     {
       title: "Java Frameworks",
@@ -399,6 +403,7 @@ on the first attempt. The student had an intuitive simulation for the interface 
           href: "https://github.com/opratrx/d287-java-frameworks",
         },
       ],
+      image: "", // Add the image property here
     },
     {
       title: "Genetic Algorithm Robots",
@@ -413,6 +418,7 @@ on the first attempt. The student had an intuitive simulation for the interface 
           href: "https://github.com/opratrx/flc_geneticalgo",
         },
       ],
+      image: "", // Add the image property here
     },
     // {
     //   title: "Stupid Hack Toronto",
