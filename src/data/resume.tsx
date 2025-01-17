@@ -51,7 +51,7 @@ export const DATA = {
       },
       Resume: {
         name: "Resume",
-        url: "/",
+        url: "https://www.dropbox.com/scl/fi/hzp3dlficskjqdn8p1lpj/main-version-2-4.pdf?rlkey=lkner0qhiav7hi9whczkynsfh&st=rt8y3k7o&dl=0",
         icon: Icons.file,
 
         navbar: true,
@@ -64,7 +64,7 @@ export const DATA = {
       },
       email: {
         name: "Send Email",
-        url: "#",
+        url: "mailto:abal387@wgu.edu",
         icon: Icons.email,
 
         navbar: true,
