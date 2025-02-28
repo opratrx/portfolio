@@ -29,7 +29,8 @@ export const DATA = {
     "Figma",
     "Photoshop",
     "Illustrator",
-    "Sketch",
+    "Play 2.0",
+    "Swift",
   ],
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
@@ -77,6 +78,23 @@ export const DATA = {
   },
 
   work: [
+    {
+      company: "Amparo",
+      href: "https://amparo.app/",
+      badges: [],
+      location: "Remote",
+      title: "Founder & CEO",
+      logoUrl: "/amparo.png",
+      start: "January 2025",
+      end: "Present",
+      description: [
+        "Independently developing Amparo, a smart budgeting and expense tracking app designed to empower users with accessible, intuitive financial management.",
+        "Handling all aspects of product design, development, market research, and user testing.",
+        "Demonstrating strong initiative and adaptability by managing every stage of the project as a one-person team.",
+        "Developed a comprehensive product roadmap to strategically phase feature development and ensure future scalability.",
+        "Leveraged full-stack development skills and a user-centric design approach to build an intuitive, secure expense management tool.",
+      ],
+    },
     {
       company: "CompSciLib",
       href: "#",
@@ -182,6 +200,34 @@ on the first attempt. The student had an intuitive simulation for the interface 
     },
   ],
   projects: [
+    {
+      title: "Amparo",
+      href: "https://amparo.app/",
+      dates: "Jan 2025 - Present",
+      active: true,
+      description:
+          "Founded [Amparo](https://amparo.app/), a iOS expense and budget tracking application designed to replace clunky spreadsheets with an intuitive, accessible solution. Coming soon to all apple devices.",
+      technologies: [
+        "Swift",
+        "Gemini Flash 1.5 8b",
+        "Core Data",
+        "CloudKit",
+        "MapKit",
+        "Swift Charts",
+        "Next.js - Web",
+        "Typescript - Web",
+      ],
+      links: [
+        {
+          type: "Website",
+          href: "https://amparo.app/",
+          icon: <Icons.globe className="size-3" />,
+        },
+      ],
+      image: "",
+      video:
+          "./Amparo Present.mp4",
+    },
     {
       title: "SwiftMD",
       href: "https://swiftmd.0n.engineer",
@@ -295,6 +341,56 @@ on the first attempt. The student had an intuitive simulation for the interface 
     // },
   ],
   hackathons: [
+    {
+    title: "Amparo",
+    dates: "In Progress",
+    tags: [
+        "Swift",
+        "Gemini Flash 1.5 8b",
+        "Core Data",
+        "CloudKit",
+        "MapKit",
+        "Swift Charts",
+        "Next.js - Web",
+        "Typescript - Web",
+      ],
+          description:
+      "Building Amparo, an expense and budget tracking application designed to replace clunky spreadsheets with an intuitive, accessible solution. Available soon on all apple devices.",
+
+          links: [
+        {
+          title: "Website",
+          icon: <Icons.globe className="h-4 w-4" />,
+          href: "https://amparo.app/",
+        },
+      ],
+          image: "./amparo.png", // Add the image property here
+      },
+    {
+      title: "HyperTrak",
+      dates: "In Progress",
+      tags: [
+        "Swift",
+        "Matplotlib",
+        "Core Data",
+        "CloudKit",
+        "MapKit",
+        "Swift Charts",
+        "Next.js - Web",
+        "Typescript - Web",
+      ],
+      description:
+          "Building HyperTrak, a iOS/watchOS ride telemetry system designed to track and analyze ride data in real-time. Recording g-forces, speed, and location data to provide a comprehensive overview of your ride experience.",
+
+      // links: [
+      //   {
+      //     title: "Website",
+      //     icon: <Icons.globe className="h-4 w-4" />,
+      //     href: "https://amparo.app/",
+      //   },
+      // ],
+      image: "./hyper.png", // Add the image property here
+    },
     {
       title: "Senior Project - Capstone",
       dates: "Western Governors University - C964",
