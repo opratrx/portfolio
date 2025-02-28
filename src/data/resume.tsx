@@ -382,13 +382,13 @@ on the first attempt. The student had an intuitive simulation for the interface 
       description:
           "Building HyperTrak, a iOS/watchOS ride telemetry system designed to track and analyze ride data in real-time. Recording g-forces, speed, and location data to provide a comprehensive overview of your ride experience.",
 
-      // links: [
-      //   {
-      //     title: "Website",
-      //     icon: <Icons.globe className="h-4 w-4" />,
-      //     href: "https://amparo.app/",
-      //   },
-      // ],
+      links: [
+        {
+          title: "Website",
+          icon: <Icons.globe className="h-4 w-4" />,
+          href: "#",
+        },
+      ],
       image: "./hyper.png", // Add the image property here
     },
     {
